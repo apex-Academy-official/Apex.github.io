@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OfferZone eBooks - Premium Kindle Deals</title>
+    <title>Apex eBooks - Premium Kindle Deals</title>
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23131921'/><circle cx='50' cy='50' r='38' fill='none' stroke='%23FF9900' stroke-width='6'/><text x='50%' y='68%' font-size='48' font-weight='900' font-family='sans-serif' fill='%23FF9900' text-anchor='middle'>O</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23131921'/><circle cx='50' cy='50' r='38' fill='none' stroke='%23FF9900' stroke-width='6'/><text x='50%' y='68%' font-size='48' font-weight='900' font-family='sans-serif' fill='%23FF9900' text-anchor='middle'>A</text></svg>">
     
     <!-- Font Awesome & Google Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -117,7 +117,7 @@
         }
 
         .hero h1 {
-            font-size: 1.6rem;
+            font-size: 1.7rem;
             font-weight: 800;
             margin-bottom: 8px;
             line-height: 1.25;
@@ -126,29 +126,28 @@
         .hero h1 span { color: var(--amazon-yellow); }
 
         .hero p {
+            color: #ccc;
             font-size: 0.9rem;
-            color: #ddd;
-            max-width: 650px;
+            max-width: 600px;
             margin: 0 auto 15px auto;
         }
 
-        .trust-banner {
-            display: inline-flex;
-            gap: 12px;
-            background: rgba(255, 255, 255, 0.08);
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.78rem;
-            flex-wrap: wrap;
+        .hero-features {
+            display: flex;
             justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            font-size: 0.8rem;
+            color: #ddd;
         }
 
-        .trust-item {
+        .hero-features div {
             display: flex;
             align-items: center;
-            gap: 6px;
-            color: var(--amazon-yellow);
-            font-weight: 600;
+            gap: 5px;
+            background: rgba(255,255,255,0.08);
+            padding: 4px 10px;
+            border-radius: 20px;
         }
 
         /* Main Container */
@@ -160,10 +159,166 @@
             z-index: 10;
         }
 
+        /* Featured Big Card */
+        .featured-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            padding: 20px;
+            margin-bottom: 25px;
+            border-top: 4px solid var(--amazon-orange);
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media (min-width: 650px) {
+            .featured-card {
+                grid-template-columns: 200px 1fr;
+                padding: 25px;
+            }
+        }
+
+        .featured-img-wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f7f7f7;
+            padding: 15px;
+            border-radius: 6px;
+        }
+
+        .featured-img-wrap img {
+            max-width: 160px;
+            width: 100%;
+            height: auto;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            border-radius: 4px;
+        }
+
+        .featured-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .featured-badge {
+            background-color: var(--danger-red);
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 3px 8px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            align-self: flex-start;
+            margin-bottom: 8px;
+        }
+
+        .featured-title {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            line-height: 1.2;
+            margin-bottom: 4px;
+        }
+
+        .featured-author {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+        }
+
+        .ratings {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--amazon-orange);
+            font-size: 0.85rem;
+            margin-bottom: 12px;
+        }
+
+        .ratings span {
+            color: var(--text-muted);
+            font-size: 0.75rem;
+        }
+
+        .featured-desc {
+            font-size: 0.85rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .stock-progress {
+            margin-bottom: 15px;
+        }
+
+        .progress-bar-bg {
+            background-color: #e0e0e0;
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 4px;
+        }
+
+        .progress-bar-fill {
+            background-color: var(--amazon-orange);
+            height: 100%;
+            width: 82%;
+            border-radius: 4px;
+        }
+
+        .progress-text {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .price-tag {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .free-price {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--danger-red);
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Buttons */
+        .btn-main {
+            background: linear-gradient(180deg, #f7dfa5 0%, #f0c14b 100%);
+            border: 1px solid;
+            border-color: #a88734 #9c7e31 #846a29;
+            color: #111;
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-weight: 800;
+            font-size: 0.95rem;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.12);
+            transition: all 0.2s ease;
+        }
+
+        .btn-main:hover {
+            background: linear-gradient(180deg, #f5d78e 0%, #eeb933 100%);
+        }
+
+        /* Section Title */
         .section-title {
             font-size: 1.1rem;
             font-weight: 800;
-            margin-bottom: 15px;
+            margin: 25px 0 15px 0;
             display: flex;
             align-items: center;
             gap: 8px;
@@ -173,161 +328,6 @@
             box-shadow: 0 2px 6px rgba(0,0,0,0.06);
             color: var(--text-dark);
             border-left: 4px solid var(--amazon-orange);
-        }
-
-        /* Featured Card */
-        .featured-card {
-            background: var(--card-bg);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            display: flex;
-            flex-direction: row;
-            border: 1px solid #e7e7e7;
-            position: relative;
-            margin-bottom: 30px;
-        }
-
-        @media (max-width: 768px) {
-            .featured-card { flex-direction: column; }
-            .hero h1 { font-size: 1.4rem; }
-        }
-
-        .tag {
-            position: absolute;
-            top: 12px;
-            left: 12px;
-            background: var(--danger-red);
-            color: white;
-            padding: 4px 10px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            border-radius: 3px;
-            z-index: 2;
-            text-transform: uppercase;
-        }
-
-        .img-container {
-            flex: 1;
-            background: #f7f7f7;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 30px 20px;
-            min-height: 260px;
-        }
-
-        .img-container img {
-            max-height: 250px;
-            max-width: 100%;
-            object-fit: contain;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-            border-radius: 4px;
-        }
-
-        .card-details {
-            flex: 1.2;
-            padding: 25px 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .book-title {
-            font-size: 1.45rem;
-            font-weight: 800;
-            margin-bottom: 4px;
-            line-height: 1.2;
-        }
-
-        .author {
-            color: var(--text-muted);
-            font-size: 0.88rem;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .rating {
-            color: var(--amazon-orange);
-            font-size: 0.85rem;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .rating-count { color: var(--text-muted); font-size: 0.8rem; }
-
-        .description {
-            font-size: 0.88rem;
-            color: #444;
-            margin-bottom: 15px;
-            line-height: 1.4;
-        }
-
-        /* Stock Bar */
-        .stock-box {
-            margin-bottom: 15px;
-        }
-        .stock-text {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.78rem;
-            font-weight: 700;
-            margin-bottom: 4px;
-            color: var(--danger-red);
-        }
-        .progress-bar {
-            width: 100%;
-            height: 8px;
-            background: #eee;
-            border-radius: 4px;
-            overflow: hidden;
-        }
-        .progress-fill {
-            width: 82%;
-            height: 100%;
-            background: linear-gradient(90deg, #ff4e50, #f9d423);
-        }
-
-        .price-box {
-            margin-bottom: 15px;
-            display: flex;
-            align-items: baseline;
-            gap: 8px;
-        }
-
-        .current-price {
-            font-size: 1.7rem;
-            font-weight: 800;
-            color: var(--danger-red);
-        }
-
-        .original-price {
-            text-decoration: line-through;
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        .cta-btn {
-            display: block;
-            width: 100%;
-            background: linear-gradient(180deg, #f7dfa5 0%, #f0c14b 100%);
-            border: 1px solid;
-            border-color: #a88734 #9c7e31 #846a29;
-            color: #111;
-            text-align: center;
-            padding: 13px;
-            border-radius: 6px;
-            font-weight: 800;
-            font-size: 0.95rem;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.12);
-        }
-
-        .cta-btn:hover {
-            background: linear-gradient(180deg, #f5d78e 0%, #eeb933 100%);
         }
 
         /* Books Grid */
@@ -381,6 +381,46 @@
             margin-bottom: 8px;
         }
 
+        .price-box {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+        }
+
+        .current-price {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--danger-red);
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            color: var(--text-muted);
+            font-size: 0.88rem;
+        }
+
+        .cta-btn {
+            display: block;
+            width: 100%;
+            background: linear-gradient(180deg, #f7dfa5 0%, #f0c14b 100%);
+            border: 1px solid;
+            border-color: #a88734 #9c7e31 #846a29;
+            color: #111;
+            text-align: center;
+            padding: 10px;
+            border-radius: 6px;
+            font-weight: 800;
+            font-size: 0.85rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.12);
+        }
+
+        .cta-btn:hover {
+            background: linear-gradient(180deg, #f5d78e 0%, #eeb933 100%);
+        }
+
         /* Pagination Section */
         .pagination-container {
             display: flex;
@@ -413,54 +453,6 @@
             border-color: var(--amazon-orange);
         }
 
-        .next-btn {
-            background: var(--amazon-light-navy);
-            color: white;
-            padding: 12px 28px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 0.95rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-            transition: transform 0.2s ease;
-        }
-
-        .next-btn:hover {
-            transform: translateY(-2px);
-            background: var(--amazon-navy);
-        }
-
-        /* FAQ Section */
-        .faq-section {
-            background: white;
-            border-radius: 8px;
-            padding: 20px;
-            border: 1px solid #e7e7e7;
-            margin-top: 25px;
-        }
-        .faq-item {
-            border-bottom: 1px solid #eee;
-            padding: 10px 0;
-        }
-        .faq-item:last-child { border-bottom: none; }
-        .faq-question {
-            font-weight: 700;
-            font-size: 0.9rem;
-            color: var(--text-dark);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .faq-answer {
-            font-size: 0.82rem;
-            color: var(--text-muted);
-            margin-top: 4px;
-            padding-left: 24px;
-        }
-
         /* Social Media Buttons */
         .social-section {
             margin-top: 15px;
@@ -479,11 +471,6 @@
             font-size: 0.85rem;
             font-weight: 700;
             text-decoration: none;
-            transition: opacity 0.2s;
-        }
-
-        .social-btn:hover {
-            opacity: 0.9;
         }
 
         .social-btn.insta {
@@ -493,23 +480,6 @@
         .social-btn.tiktok {
             background: #000000;
             border: 1px solid #333;
-        }
-
-        /* Social Proof Toast */
-        .social-proof-toast {
-            position: fixed;
-            bottom: 15px;
-            left: 15px;
-            background: white;
-            border-radius: 8px;
-            padding: 10px 14px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.18);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            z-index: 1000;
-            font-size: 0.78rem;
-            border-left: 4px solid #27ae60;
         }
 
         /* Footer */
@@ -530,7 +500,7 @@
     <header>
         <a href="https://appsave.store/cl/i/ved6od" target="_blank" class="logo">
             <div class="logo-icon"><i class="fa-solid fa-bolt"></i></div>
-            OfferZone <span>eBooks</span>
+            Apex <span>eBooks</span>
         </a>
         <div class="badge">
             <i class="fa-solid fa-fire"></i> US Free Deals
@@ -539,98 +509,108 @@
 
     <!-- Urgency Countdown Timer -->
     <div class="timer-bar">
-        <i class="fa-solid fa-clock"></i> Free Promotional Copies Expire In: <span id="timer">14m 32s</span>
+        <i class="fa-solid fa-clock"></i> Free Promotional Copies Expire In: <span id="timer">14m 59s</span>
     </div>
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1>Claim Best-Selling eBooks <span>100% Free</span></h1>
+        <h1>Claim Best-Selling <span>eBooks 100% Free</span></h1>
         <p>Instant digital downloads for Amazon Kindle bestsellers. Limited promotional period.</p>
         
-        <div class="trust-banner">
-            <div class="trust-item"><i class="fa-solid fa-circle-check"></i> Instant PDF Download</div>
-            <div class="trust-item"><i class="fa-solid fa-shield-halved"></i> Verified Safe</div>
-            <div class="trust-item"><i class="fa-solid fa-mobile-screen"></i> Read on Any Device</div>
+        <div class="hero-features">
+            <div><i class="fa-solid fa-circle-check" style="color: #4CAF50;"></i> Instant PDF Download</div>
+            <div><i class="fa-solid fa-shield-halved" style="color: #2196F3;"></i> Verified Safe</div>
+            <div><i class="fa-solid fa-mobile-screen-button" style="color: #FF9900;"></i> Read on Any Device</div>
         </div>
     </section>
 
     <!-- Main Content Container -->
     <div class="container">
         
-        <!-- #1 Main Featured Offer -->
-        <div class="section-title">
-            <i class="fa-solid fa-star" style="color: #FF9900;"></i> Top Featured eBook Today
-        </div>
-        
+        <!-- Big Featured Book -->
         <div class="featured-card">
-            <span class="tag">#1 Bestseller</span>
-            
-            <div class="img-container">
+            <div class="featured-img-wrap">
                 <a href="https://appsave.store/cl/i/ved6od" target="_blank">
-                    <img src="https://m.media-amazon.com/images/I/81YkqyaFVEL._AC_UY327_FMwebp_QL65_.jpg" alt="Atomic Habits by James Clear">
+                    <img src="https://m.media-amazon.com/images/I/81YkqyaFVEL._AC_UY327_FMwebp_QL65_.jpg" alt="Atomic Habits Cover">
                 </a>
             </div>
-            
-            <div class="card-details">
-                <h3 class="book-title">Atomic Habits</h3>
-                <div class="author">by James Clear</div>
+            <div class="featured-details">
+                <div class="featured-badge">#1 Bestseller</div>
+                <h2 class="featured-title">Atomic Habits</h2>
+                <div class="featured-author">by James Clear</div>
                 
-                <div class="rating">
+                <div class="ratings">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
-                    <span class="rating-count">(112,450 Ratings)</span>
+                    <span>(112,450 Ratings)</span>
                 </div>
 
-                <p class="description">
-                    Learn how tiny habits can lead to remarkable results. The #1 world bestseller on habit formation and personal growth.
-                </p>
-
-                <!-- Stock Scarcity Bar -->
-                <div class="stock-box">
-                    <div class="stock-text">
-                        <span><i class="fa-solid fa-fire"></i> High Demand</span>
+                <p class="featured-desc">Learn how tiny habits can lead to remarkable results. The #1 world bestseller on habit formation and personal growth.</p>
+                
+                <div class="stock-progress">
+                    <div class="progress-text">
+                        <span style="color: var(--danger-red);"><i class="fa-solid fa-fire"></i> High Demand</span>
                         <span>82% Claimed</span>
                     </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill"></div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill"></div>
                     </div>
                 </div>
-                
-                <div class="price-box">
-                    <span class="current-price">$0.00</span>
-                    <span class="original-price">$27.00</span>
+
+                <div class="price-tag">
+                    <span class="free-price">$0.00</span>
+                    <span class="old-price">$27.00</span>
                 </div>
-                
-                <a href="https://appsave.store/cl/i/ved6od" target="_blank" class="cta-btn">
-                    <i class="fa-solid fa-download"></i> Download Free eBook Now
+
+                <a href="https://appsave.store/cl/i/ved6od" target="_blank" class="btn-main">
+                    <i class="fa-solid fa-download"></i> Download Free Copy Now
                 </a>
             </div>
         </div>
 
-        <!-- #2 Popular Amazon eBooks Grid -->
+        <!-- More Books Section Title -->
         <div class="section-title">
-            <i class="fa-solid fa-book-open" style="color: #FF9900;"></i> Trending Amazon Best-Sellers
+            <i class="fa-solid fa-book-open" style="color: #FF9900;"></i> Popular Recommended eBooks
         </div>
 
+        <!-- Books Grid -->
         <div class="books-grid">
 
-            <!-- Book 2 -->
+            <!-- Book 1 -->
             <div class="grid-card">
                 <div class="grid-img">
                     <a href="https://appsave.store/cl/i/ved6od" target="_blank">
-                        <img src="https://m.media-amazon.com/images/I/81bsw6fnUiL._AC_UY327_FMwebp_QL65_.jpg" alt="Rich Dad Poor Dad">
+                        <img src="https://covers.openlibrary.org/b/id/12885623-L.jpg" alt="Rich Dad Poor Dad">
                     </a>
                 </div>
                 <h4 class="grid-title">Rich Dad Poor Dad</h4>
                 <div class="grid-author">by Robert T. Kiyosaki</div>
-                <div class="price-box" style="margin-bottom:8px;">
-                    <span class="current-price" style="font-size: 1.3rem;">$0.00</span>
-                    <span class="original-price">$19.99</span>
+                <div class="price-box">
+                    <span class="current-price">$0.00</span>
+                    <span class="original-price">$16.95</span>
                 </div>
-                <a href="https://appsave.store/cl/i/ved6od" target="_blank" class="cta-btn" style="padding:10px; font-size:0.85rem;">
+                <a href="url?id=0" target="_blank" class="cta-btn">
+                    <i class="fa-solid fa-download"></i> Claim Free Copy
+                </a>
+            </div>
+
+            <!-- Book 2 -->
+            <div class="grid-card">
+                <div class="grid-img">
+                    <a href="url?id=0" target="_blank">
+                        <img src="https://covers.openlibrary.org/b/id/11130635-L.jpg" alt="The Psychology of Money">
+                    </a>
+                </div>
+                <h4 class="grid-title">Psychology of Money</h4>
+                <div class="grid-author">by Morgan Housel</div>
+                <div class="price-box">
+                    <span class="current-price">$0.00</span>
+                    <span class="original-price">$20.00</span>
+                </div>
+                <a href="https://appsave.store/cl/i/ved6od" target="_blank" class="cta-btn">
                     <i class="fa-solid fa-download"></i> Claim Free Copy
                 </a>
             </div>
@@ -639,16 +619,16 @@
             <div class="grid-card">
                 <div class="grid-img">
                     <a href="https://appsave.store/cl/i/ved6od" target="_blank">
-                        <img src="https://m.media-amazon.com/images/I/71g2ednj0JL._AC_UY327_FMwebp_QL65_.jpg" alt="The Psychology of Money">
+                        <img src="https://covers.openlibrary.org/b/id/10522856-L.jpg" alt="Can't Hurt Me">
                     </a>
                 </div>
-                <h4 class="grid-title">The Psychology of Money</h4>
-                <div class="grid-author">by Morgan Housel</div>
-                <div class="price-box" style="margin-bottom:8px;">
-                    <span class="current-price" style="font-size: 1.3rem;">$0.00</span>
+                <h4 class="grid-title">Can't Hurt Me</h4>
+                <div class="grid-author">by David Goggins</div>
+                <div class="price-box">
+                    <span class="current-price">$0.00</span>
                     <span class="original-price">$24.99</span>
                 </div>
-                <a href="https://appsave.store/cl/i/ved6od" target="_blank" class="cta-btn" style="padding:10px; font-size:0.85rem;">
+                <a href="https://appsave.store/cl/i/ved6od" target="_blank" class="cta-btn">
                     <i class="fa-solid fa-download"></i> Claim Free Copy
                 </a>
             </div>
@@ -657,34 +637,34 @@
             <div class="grid-card">
                 <div class="grid-img">
                     <a href="https://appsave.store/cl/i/ved6od" target="_blank">
-                        <img src="https://m.media-amazon.com/images/I/611X8GI7hpL._AC_UY327_FMwebp_QL65_.jpg" alt="The 48 Laws of Power">
+                        <img src="https://covers.openlibrary.org/b/id/8381831-L.jpg" alt="Thinking, Fast and Slow">
                     </a>
                 </div>
-                <h4 class="grid-title">The 48 Laws of Power</h4>
-                <div class="grid-author">by Robert Greene</div>
-                <div class="price-box" style="margin-bottom:8px;">
-                    <span class="current-price" style="font-size: 1.3rem;">$0.00</span>
-                    <span class="original-price">$26.00</span>
+                <h4 class="grid-title">Thinking, Fast and Slow</h4>
+                <div class="grid-author">by Daniel Kahneman</div>
+                <div class="price-box">
+                    <span class="current-price">$0.00</span>
+                    <span class="original-price">$22.00</span>
                 </div>
-                <a href="https://appsave.store/cl/i/ved6od" target="_blank" class="cta-btn" style="padding:10px; font-size:0.85rem;">
+                <a href="https://appsave.store/cl/i/ved6od" target="_blank" class="cta-btn">
                     <i class="fa-solid fa-download"></i> Claim Free Copy
                 </a>
             </div>
 
-            <!-- Book 5 (Fixed Image) -->
+            <!-- Book 5 -->
             <div class="grid-card">
                 <div class="grid-img">
                     <a href="https://appsave.store/cl/i/ved6od" target="_blank">
-                        <img src="https://images-na.ssl-images-amazon.com/images/I/71QKQ9mwV7L._AC_UL600_SR600,600_.jpg" alt="The Subtle Art of Not Giving a F*ck">
+                        <img src="https://covers.openlibrary.org/b/id/10294628-L.jpg" alt="Deep Work">
                     </a>
                 </div>
-                <h4 class="grid-title">The Subtle Art of Not Giving a F*ck</h4>
-                <div class="grid-author">by Mark Manson</div>
-                <div class="price-box" style="margin-bottom:8px;">
-                    <span class="current-price" style="font-size: 1.3rem;">$0.00</span>
-                    <span class="original-price">$24.99</span>
+                <h4 class="grid-title">Deep Work</h4>
+                <div class="grid-author">by Cal Newport</div>
+                <div class="price-box">
+                    <span class="current-price">$0.00</span>
+                    <span class="original-price">$28.00</span>
                 </div>
-                <a href="https://appsave.store/cl/i/ved6od" target="_blank" class="cta-btn" style="padding:10px; font-size:0.85rem;">
+                <a href="https://appsave.store/cl/i/ved6od" target="_blank" class="cta-btn">
                     <i class="fa-solid fa-download"></i> Claim Free Copy
                 </a>
             </div>
@@ -693,16 +673,16 @@
             <div class="grid-card">
                 <div class="grid-img">
                     <a href="https://appsave.store/cl/i/ved6od" target="_blank">
-                        <img src="https://m.media-amazon.com/images/I/71g015ECB5L._AC_UY327_FMwebp_QL65_.jpg" alt="Can't Hurt Me">
+                        <img src="https://covers.openlibrary.org/b/id/8231996-L.jpg" alt="How to Win Friends and Influence People">
                     </a>
                 </div>
-                <h4 class="grid-title">Can't Hurt Me</h4>
-                <div class="grid-author">by David Goggins</div>
-                <div class="price-box" style="margin-bottom:8px;">
-                    <span class="current-price" style="font-size: 1.3rem;">$0.00</span>
-                    <span class="original-price">$29.99</span>
+                <h4 class="grid-title">How to Win Friends</h4>
+                <div class="grid-author">by Dale Carnegie</div>
+                <div class="price-box">
+                    <span class="current-price">$0.00</span>
+                    <span class="original-price">$18.00</span>
                 </div>
-                <a href="https://appsave.store/cl/i/ved6od" target="_blank" class="cta-btn" style="padding:10px; font-size:0.85rem;">
+                <a href="url?id=0" target="_blank" class="cta-btn">
                     <i class="fa-solid fa-download"></i> Claim Free Copy
                 </a>
             </div>
@@ -711,76 +691,50 @@
 
         <!-- Pagination Section -->
         <div class="pagination-container">
-            <a href="page2.html" class="next-btn">
-                <span>View More eBooks (Page 2)</span>
-                <i class="fa-solid fa-arrow-right"></i>
-            </a>
             <div class="pagination">
                 <a href="#" class="page-link active">1</a>
                 <a href="page2.html" class="page-link">2</a>
-                <a href="page2.html" class="page-link">3</a>
-                <a href="page2.html" class="page-link">&raquo;</a>
+                <a href="page2.html" class="page-link">Next &raquo;</a>
             </div>
         </div>
 
-        <!-- FAQ Section -->
-        <div class="faq-section">
-            <div class="section-title" style="box-shadow:none; padding:0; border:none; margin-bottom:12px;">
-                <i class="fa-solid fa-circle-question" style="color:#FF9900;"></i> Frequently Asked Questions
-            </div>
-            <div class="faq-item">
-                <div class="faq-question"><i class="fa-solid fa-check-circle" style="color:#27ae60;"></i> Are these eBooks completely free?</div>
-                <div class="faq-answer">Yes, all digital books on this promotional portal are 100% free during the limited giveaway window.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question"><i class="fa-solid fa-check-circle" style="color:#27ae60;"></i> What formats will I receive?</div>
-                <div class="faq-answer">You can instantly download in PDF, ePub, or Kindle-compatible formats readable on smartphones, tablets, and computers.</div>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- Live Social Proof Popup -->
-    <div class="social-proof-toast" id="toast">
-        <i class="fa-solid fa-circle-check" style="color:#27ae60; font-size:1.1rem;"></i>
-        <div>
-            <b>Sarah M. (New York)</b> just claimed <i>Atomic Habits</i> free!
-        </div>
     </div>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 OfferZone Best Offers. All rights reserved.</p>
+        <p>&copy; 2026 Apex Best Offers. All rights reserved.</p>
         <p style="font-size: 0.72rem; color: #888; margin-bottom: 12px;">This site is an independent promotional portal and is not directly affiliated with Amazon.com, Inc.</p>
         
-        <!-- Social Media Links -->
         <div class="social-section">
-            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="social-btn insta">
+            <a href="https://www.instagram.com/" target="_blank" class="social-btn insta">
                 <i class="fa-brands fa-instagram"></i> Instagram
             </a>
-            <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" class="social-btn tiktok">
+            <a href="https://www.tiktok.com/" target="_blank" class="social-btn tiktok">
                 <i class="fa-brands fa-tiktok"></i> TikTok
             </a>
         </div>
     </footer>
 
-    <!-- Script for Dynamic Elements -->
+    <!-- Countdown Timer Script -->
     <script>
-        // Simple Countdown Logic
-        let duration = 872; // seconds
+        let duration = 15 * 60; // 15 minutes
         const timerDisplay = document.getElementById('timer');
-        setInterval(() => {
-            let minutes = Math.floor(duration / 60);
-            let seconds = duration % 60;
-            seconds = seconds < 10 ? '0' + seconds : seconds;
-            timerDisplay.textContent = minutes + "m " + seconds + "s";
-            if (duration > 0) duration--;
-        }, 1000);
 
-        // Hide notification toast after 5 seconds
-        setTimeout(() => {
-            document.getElementById('toast').style.display = 'none';
-        }, 5000);
+        setInterval(function () {
+            let minutes = parseInt(duration / 60, 10);
+            let seconds = parseInt(duration % 60, 10);
+
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            if (timerDisplay) {
+                timerDisplay.textContent = minutes + "m " + seconds + "s";
+            }
+
+            if (--duration < 0) {
+                duration = 15 * 60;
+            }
+        }, 1000);
     </script>
 </body>
 </html>
