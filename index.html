@@ -1,307 +1,404 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slovenia Relocation & Expat Guide 2026</title>
-    <!-- Google Fonts & FontAwesome Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        :root {
-            --primary: #2563eb;
-            --primary-dark: #1d4ed8;
-            --secondary: #0f172a;
-            --gray-light: #f8fafc;
-            --text-dark: #334155;
-            --text-muted: #64748b;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apex Library — Books for Deep Focus & Elite Performance</title>
+<meta name="description" content="20 books on discipline, deep work and elite performance, curated by Apex. Start with Atomic Habits — free to download.">
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Inter', sans-serif;
-        }
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%230B0B0D%22 stroke=%22%23E8A33D%22 stroke-width=%226%22/></svg>">
 
-        body {
-            background-color: var(--gray-light);
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-        /* Header */
-        header {
-            background: #ffffff;
-            border-bottom: 1px solid #e2e8f0;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+<style>
+/* ---------- tokens ---------- */
+:root{
+  --bg: #0B0B0D;
+  --surface: #141317;
+  --surface-2: #1C1B20;
+  --line: rgba(237,235,227,0.10);
+  --text: #EEECE4;
+  --muted: #9A979E;
+  --gold: #E8A33D;
+  --pink: #D6547E;
+  --gradient: linear-gradient(135deg, var(--gold) 0%, var(--pink) 100%);
+  --serif: "Fraunces", Georgia, serif;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --container: 1160px;
+}
 
-        .logo {
-            font-weight: 700;
-            font-size: 1.25rem;
-            color: var(--secondary);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+}
 
-        .logo i {
-            color: var(--primary);
-        }
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--sans);
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
 
-        /* Hero Section */
-        .hero {
-            max-width: 1100px;
-            margin: 3rem auto;
-            padding: 0 1.5rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
+a{color:inherit;text-decoration:none;}
+ul{list-style:none;margin:0;padding:0;}
+img{max-width:100%;display:block;}
 
-        .hero-text h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--secondary);
-            line-height: 1.2;
-            margin-bottom: 1rem;
-        }
+.grain{
+  position:fixed;inset:0;pointer-events:none;z-index:2;opacity:0.035;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
 
-        .hero-text p {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            margin-bottom: 1.5rem;
-        }
+/* ---------- header ---------- */
+.site-header{
+  position:sticky;top:0;z-index:10;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:22px clamp(20px,5vw,64px);
+  background:linear-gradient(var(--bg) 60%, transparent);
+  backdrop-filter:blur(6px);
+}
+.brand{display:flex;align-items:center;gap:10px;}
+.brand-ring{
+  width:22px;height:22px;border-radius:50%;
+  background:var(--gradient);
+  padding:3px;
+  display:inline-block;
+}
+.brand-ring::after{
+  content:"";display:block;width:100%;height:100%;border-radius:50%;
+  background:var(--bg);
+}
+.brand-word{
+  font-family:var(--serif);font-weight:700;font-size:19px;letter-spacing:0.02em;
+}
+.site-nav{display:flex;align-items:center;gap:28px;font-size:14.5px;color:var(--muted);}
+.site-nav a{transition:color .2s ease;}
+.site-nav a:hover, .site-nav a:focus-visible{color:var(--text);}
+.ig-link{display:inline-flex;align-items:center;gap:6px;color:var(--text) !important;}
 
-        /* Form Card */
-        .form-card {
-            background: #ffffff;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
-            border: 1px solid #e2e8f0;
-        }
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:13px 22px;border-radius:999px;
+  font-size:15px;font-weight:600;
+  border:1px solid transparent;
+  transition:transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease;
+  cursor:pointer;
+}
+.btn:focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+.btn-primary{
+  background:var(--gradient);color:#100C0E;
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 24px -8px rgba(214,84,126,0.45);}
+.btn-ghost{
+  border-color:var(--line);color:var(--text);
+}
+.btn-ghost:hover{border-color:rgba(237,235,227,0.35);}
+.btn-download{
+  background:var(--surface-2);color:var(--text);border:1px solid var(--line);
+  font-size:14px;padding:11px 18px;
+}
+.btn-download:hover{
+  border-color:transparent;background:var(--gradient);color:#100C0E;
+  transform:translateY(-1px);
+}
 
-        .form-card h3 {
-            margin-bottom: 1rem;
-            color: var(--secondary);
-        }
+/* ---------- hero ---------- */
+.hero{padding:clamp(64px,12vw,120px) clamp(20px,5vw,64px) clamp(40px,8vw,80px);}
+.hero-inner{max-width:var(--container);margin:0 auto;}
+.hero-title{
+  font-family:var(--serif);
+  font-weight:600;
+  font-size:clamp(40px,7.2vw,88px);
+  line-height:1.04;
+  letter-spacing:-0.01em;
+  margin:0 0 28px;
+}
+.hero-title .line{display:block;opacity:0;transform:translateY(18px);animation:reveal .7s cubic-bezier(.2,.7,.2,1) forwards;}
+.hero-title .line:nth-child(1){animation-delay:.05s;}
+.hero-title .line:nth-child(2){animation-delay:.18s;}
+.hero-title .line:nth-child(3){animation-delay:.31s;}
+.hero-title .accent{
+  font-style:italic;font-weight:500;
+  background:var(--gradient);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+@keyframes reveal{to{opacity:1;transform:translateY(0);}}
 
-        .form-group {
-            margin-bottom: 1rem;
-        }
+.hero-sub{
+  max-width:52ch;color:var(--muted);font-size:clamp(16px,1.6vw,18.5px);
+  margin:0 0 36px;
+  opacity:0;transform:translateY(14px);animation:reveal .7s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:.42s;
+}
+.hero-actions{
+  display:flex;flex-wrap:wrap;gap:14px;margin-bottom:56px;
+  opacity:0;transform:translateY(14px);animation:reveal .7s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:.52s;
+}
+.hero-stats{
+  display:flex;gap:clamp(28px,5vw,56px);
+  border-top:1px solid var(--line);padding-top:26px;
+  opacity:0;animation:reveal .7s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:.62s;
+}
+.hero-stats div{display:flex;flex-direction:column;gap:2px;}
+.hero-stats strong{font-family:var(--serif);font-size:26px;font-weight:600;}
+.hero-stats span{font-size:13px;color:var(--muted);}
 
-        .form-group input {
-            width: 100%;
-            padding: 0.8rem 1rem;
-            border: 1px solid #cbd5e1;
-            border-radius: 6px;
-            font-size: 1rem;
-            outline: none;
-            transition: border-color 0.2s;
-        }
+/* ---------- featured ---------- */
+.featured{padding:20px clamp(20px,5vw,64px) clamp(60px,9vw,100px);}
+.featured-inner{max-width:var(--container);margin:0 auto;}
+.featured-card{
+  display:grid;grid-template-columns:220px 1fr;gap:clamp(28px,5vw,64px);
+  align-items:center;
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:clamp(24px,4vw,44px);
+}
+.cover{
+  aspect-ratio:3/4.4;border-radius:8px;
+  background:linear-gradient(160deg,#1a1a1e 0%, #101012 100%);
+  border:1px solid rgba(237,235,227,0.14);
+  position:relative;overflow:hidden;
+  display:flex;flex-direction:column;justify-content:space-between;
+  padding:18px 16px;
+  box-shadow:0 24px 50px -20px rgba(0,0,0,0.6);
+}
+.cover::before{
+  content:"";position:absolute;inset:0 auto 0 0;width:6px;
+  background:var(--gradient);
+}
+.cover-title{
+  font-family:var(--serif);font-weight:700;font-size:22px;line-height:1.12;
+}
+.cover-author{font-size:11.5px;color:var(--muted);letter-spacing:0.03em;}
+.featured-copy h2{
+  font-family:var(--serif);font-size:clamp(28px,3.4vw,38px);margin:0 0 4px;font-weight:600;
+}
+.featured-copy .author{color:var(--muted);margin:0 0 16px;font-size:15px;}
+.featured-copy .blurb{max-width:56ch;color:#C9C7CC;margin:0 0 26px;}
 
-        .form-group input:focus {
-            border-color: var(--primary);
-        }
+/* ---------- shelf ---------- */
+.shelf{padding:0 clamp(20px,5vw,64px) clamp(70px,10vw,110px);}
+.shelf-inner{max-width:var(--container);margin:0 auto;}
+.shelf-title{
+  font-family:var(--serif);font-weight:600;font-size:clamp(28px,3.6vw,40px);
+  margin:0 0 10px;
+}
+.shelf-sub{color:var(--muted);max-width:58ch;margin:0 0 40px;}
 
-        .btn-submit {
-            width: 100%;
-            background: var(--primary);
-            color: white;
-            padding: 0.9rem;
-            border: none;
-            border-radius: 6px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
+.book-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(230px, 1fr));
+  gap:16px;
+}
+.book-card{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:22px 20px 20px;
+  display:flex;flex-direction:column;gap:14px;
+  transition:transform .2s ease, border-color .2s ease, background .2s ease;
+}
+.book-card:hover{
+  transform:translateY(-4px);
+  border-color:rgba(237,235,227,0.2);
+  background:var(--surface-2);
+}
+.book-index{
+  font-family:var(--serif);font-style:italic;color:var(--muted);font-size:13px;
+}
+.book-card h3{
+  font-family:var(--serif);font-weight:600;font-size:19px;margin:0;line-height:1.2;
+}
+.book-card .author{font-size:13.5px;color:var(--muted);margin:0;}
+.book-card .hook{font-size:14px;color:#C9C7CC;margin:0;flex-grow:1;}
+.book-card .btn-download{align-self:flex-start;margin-top:4px;}
 
-        .btn-submit:hover {
-            background: var(--primary-dark);
-        }
+/* ---------- cta band ---------- */
+.cta-band{
+  padding:clamp(64px,10vw,110px) clamp(20px,5vw,64px);
+  background:var(--surface);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  text-align:center;
+}
+.cta-inner{max-width:640px;margin:0 auto;}
+.cta-inner h2{
+  font-family:var(--serif);font-size:clamp(28px,4vw,42px);font-weight:600;margin:0 0 14px;
+}
+.cta-inner p{color:var(--muted);margin:0 0 32px;}
 
-        .privacy-note {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            text-align: center;
-            margin-top: 0.8rem;
-        }
+/* ---------- footer ---------- */
+.site-footer{padding:44px clamp(20px,5vw,64px) 56px;}
+.footer-inner{
+  max-width:var(--container);margin:0 auto;
+  display:flex;flex-direction:column;align-items:flex-start;gap:12px;
+  color:var(--muted);font-size:13.5px;
+}
+.brand-small .brand-word{font-size:16px;}
+.footer-inner a{color:var(--muted);text-decoration:underline;text-underline-offset:3px;}
+.footer-inner a:hover{color:var(--text);}
 
-        /* Features Section */
-        .features {
-            background: #ffffff;
-            padding: 4rem 1.5rem;
-            border-top: 1px solid #e2e8f0;
-        }
+/* ---------- responsive ---------- */
+@media (max-width:720px){
+  .featured-card{grid-template-columns:1fr;}
+  .cover{max-width:180px;}
+  .site-nav{gap:16px;}
+}
 
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .section-title h2 {
-            font-size: 2rem;
-            color: var(--secondary);
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 2rem;
-        }
-
-        .feature-card {
-            padding: 1.5rem;
-            border-radius: 8px;
-            background: var(--gray-light);
-            border: 1px solid #f1f5f9;
-        }
-
-        .feature-card i {
-            font-size: 1.8rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        .feature-card h4 {
-            margin-bottom: 0.5rem;
-            color: var(--secondary);
-        }
-
-        .feature-card p {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-        }
-
-        /* Testimonial Section */
-        .testimonial {
-            max-width: 800px;
-            margin: 4rem auto;
-            text-align: center;
-            padding: 0 1.5rem;
-        }
-
-        .testimonial blockquote {
-            font-size: 1.2rem;
-            font-style: italic;
-            color: var(--text-dark);
-            margin-bottom: 1rem;
-        }
-
-        .testimonial cite {
-            font-weight: 600;
-            color: var(--secondary);
-            font-style: normal;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--secondary);
-            color: #94a3b8;
-            text-align: center;
-            padding: 2rem 1.5rem;
-            font-size: 0.9rem;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-        }
-    </style>
+</style>
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <div class="logo">
-            <i class="fa-solid fa-compass"></i>
-            <span>Slovenia Expat Guide</span>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="site-header">
+  <a class="brand" href="#top">
+    <span class="brand-ring" aria-hidden="true"></span>
+    <span class="brand-word">APEX</span>
+  </a>
+  <nav class="site-nav">
+    <a href="#shelf">The shelf</a>
+    <a class="ig-link" href="https://www.instagram.com/apex_acdm" target="_blank" rel="noopener">
+      Instagram
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>
+    </a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-inner">
+      <h1 class="hero-title">
+        <span class="line">Your focus has</span>
+        <span class="line">a ceiling.</span>
+        <span class="line accent">These books raise it.</span>
+      </h1>
+      <p class="hero-sub">
+        Twenty books on discipline, deep work and elite performance — the same
+        material behind everything Apex posts. Free to download, starting with
+        the one that started it all.
+      </p>
+      <div class="hero-actions">
+        <a href="#featured" class="btn btn-primary">Start with Atomic Habits</a>
+        <a href="#shelf" class="btn btn-ghost">Browse the shelf</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>20</strong><span>books</span></div>
+        <div><strong>0$</strong><span>cost</span></div>
+        <div><strong>1</strong><span>system</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="featured" id="featured">
+    <div class="featured-inner">
+      <div class="featured-card">
+        <div class="cover cover-atomic" aria-hidden="true">
+          <span class="cover-title">Atomic<br>Habits</span>
+          <span class="cover-author">James Clear</span>
         </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-text">
-            <h1>Moving, Working, or Studying in Slovenia in 2026?</h1>
-            <p>Avoid expensive bureaucracy mistakes, find housing without extra fees, and navigate life in Slovenia easily with our free comprehensive handbook.</p>
+        <div class="featured-copy">
+          <h2>Atomic Habits</h2>
+          <p class="author">James Clear</p>
+          <p class="blurb">
+            The system behind every small habit that compounds into elite
+            performance. If you only read one thing from this list, it's the
+            one Apex was built around — a practical framework for building the
+            routines that make focus automatic instead of forced.
+          </p>
+          <a class="btn btn-download" data-book="Atomic Habits"
+             href="https://appsave.store/cl/i/ved6od" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></svg>
+            Download the book
+          </a>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="form-card">
-            <h3>Get Your Free 2026 Guide</h3>
-            <form action="#" method="POST">
-                <div class="form-group">
-                    <input type="text" placeholder="First Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" placeholder="Email Address" required>
-                </div>
-                <button type="submit" class="btn-submit">
-                    <i class="fa-solid fa-download"></i> Download Free PDF
-                </button>
-            </form>
-            <p class="privacy-note"><i class="fa-solid fa-lock"></i> 100% Free. No spam. Unsubscribe anytime.</p>
-        </div>
-    </section>
+  <section class="shelf" id="shelf">
+    <div class="shelf-inner">
+      <h2 class="shelf-title">19 more, same standard</h2>
+      <p class="shelf-sub">Every book here earns its spot for one reason: it changes how you work, not just how you feel about working.</p>
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <div class="section-title">
-                <h2>What You Will Learn Inside</h2>
-            </div>
-            <div class="grid">
-                <div class="feature-card">
-                    <i class="fa-solid fa-file-signature"></i>
-                    <h4>Bureaucracy Made Easy</h4>
-                    <p>Clear checklists for residency permits, visas, and registration paperwork.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fa-solid fa-house-user"></i>
-                    <h4>Housing & Living Costs</h4>
-                    <p>Direct platforms to find rentals in Ljubljana and Maribor without high agency costs.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fa-solid fa-briefcase"></i>
-                    <h4>Jobs & Student Rights</h4>
-                    <p>Insights into English-speaking jobs and legal working hours for students.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fa-solid fa-car"></i>
-                    <h4>Car Import & Logistics</h4>
-                    <p>Updated 2026 procedures for importing vehicles and getting local insurance.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+      <ul class="book-grid" id="book-grid"></ul>
+    </div>
+  </section>
 
-    <!-- Testimonial Section -->
-    <section class="testimonial">
-        <div class="container">
-            <blockquote>"This guide saved me weeks of stress when dealing with paperwork and finding an apartment in Ljubljana. A must-read for any newcomer."</blockquote>
-            <cite>— Alex M. (Expat & Software Engineer)</cite>
-        </div>
-    </section>
+  <section class="cta-band">
+    <div class="cta-inner">
+      <h2>Daily systems live on Instagram.</h2>
+      <p>Trackers, study-with-me sessions and the habits behind this list — posted there first.</p>
+      <a class="btn btn-primary" href="https://www.instagram.com/apex_acdm" target="_blank" rel="noopener">
+        Follow @apex_acdm
+      </a>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Slovenia Relocation Guide. All rights reserved.</p>
-    </footer>
+</main>
 
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="brand brand-small">
+      <span class="brand-ring" aria-hidden="true"></span>
+      <span class="brand-word">APEX</span>
+    </div>
+    <p>Independent reading list, not affiliated with any publisher or author.</p>
+    <a href="https://www.instagram.com/apex_acdm" target="_blank" rel="noopener">instagram.com/apex_acdm</a>
+  </div>
+</footer>
+
+<script>
+const DOWNLOAD_URL = "https://appsave.store/cl/i/ved6od";
+
+const books = [
+  { title: "Deep Work", author: "Cal Newport", hook: "Why the ability to focus without distraction is becoming rare — and valuable." },
+  { title: "Can't Hurt Me", author: "David Goggins", hook: "A brutal account of turning pain into fuel and rebuilding from the inside out." },
+  { title: "The 7 Habits of Highly Effective People", author: "Stephen R. Covey", hook: "The foundational framework most modern productivity advice still borrows from." },
+  { title: "Think and Grow Rich", author: "Napoleon Hill", hook: "A century-old study of what actually separates achievers from everyone else." },
+  { title: "The Subtle Art of Not Giving a F*ck", author: "Mark Manson", hook: "A case for choosing your struggles on purpose instead of drifting into them." },
+  { title: "Grit", author: "Angela Duckworth", hook: "Why sustained effort predicts success better than raw talent ever does." },
+  { title: "The Compound Effect", author: "Darren Hardy", hook: "Small, boring decisions repeated daily — and how they quietly change everything." },
+  { title: "Mindset", author: "Carol S. Dweck", hook: "The difference between believing you're fixed and believing you can grow." },
+  { title: "The 5 AM Club", author: "Robin Sharma", hook: "A story-driven case for owning the first hour of your day." },
+  { title: "Discipline Equals Freedom", author: "Jocko Willink", hook: "A field manual for people who need less motivation and more structure." },
+  { title: "Make Your Bed", author: "William H. McRaven", hook: "Ten short lessons from Navy SEAL training that scale to ordinary life." },
+  { title: "The Miracle Morning", author: "Hal Elrod", hook: "A simple morning routine built to compound over months, not days." },
+  { title: "So Good They Can't Ignore You", author: "Cal Newport", hook: "Why chasing passion is bad advice — and what to build instead." },
+  { title: "Essentialism", author: "Greg McKeown", hook: "The disciplined pursuit of less — and why it gets you further." },
+  { title: "The War of Art", author: "Steven Pressfield", hook: "A short, sharp look at the resistance that stops most work before it starts." },
+  { title: "Digital Minimalism", author: "Cal Newport", hook: "A philosophy for using technology on purpose instead of by default." },
+  { title: "The One Thing", author: "Gary Keller", hook: "One question to cut through a long to-do list down to what matters." },
+  { title: "Extreme Ownership", author: "Jocko Willink & Leif Babin", hook: "Combat leadership lessons on taking responsibility when things go wrong." },
+  { title: "The Power of Now", author: "Eckhart Tolle", hook: "A different angle on focus — presence, rather than pressure." },
+];
+
+const grid = document.getElementById("book-grid");
+
+const markup = books.map((book, i) => `
+  <li class="book-card">
+    <span class="book-index">${String(i + 2).padStart(2, "0")}</span>
+    <div>
+      <h3>${book.title}</h3>
+      <p class="author">${book.author}</p>
+    </div>
+    <p class="hook">${book.hook}</p>
+    <a class="btn btn-download" href="${DOWNLOAD_URL}" target="_blank" rel="noopener" data-book="${book.title}">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></svg>
+      Download
+    </a>
+  </li>
+`).join("");
+
+grid.innerHTML = markup;
+
+</script>
 </body>
 </html>
